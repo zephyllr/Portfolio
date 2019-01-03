@@ -6,13 +6,14 @@ class Cover extends React.Component {
       <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
         <div class="my-auto">
           <h1 class="mb-0">Alice
-            <span class="text-primary">Lu</span>
+            <span class="text-primary"> Lu</span>
           </h1>
           <div class="subheading mb-5">
             <a href="mailto:alice.lu@nyu.edu">alice.lu@nyu.edu</a>
           </div>
           <p class="lead mb-5">
-            Software Engineer<br/>
+            <b>Software Engineer</b><br/>
+            Graphics Designer<br/>
           </p>
           <div class="social-icons">
             <a href="https://www.linkedin.com/in/alice-lu/">

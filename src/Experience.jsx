@@ -6,6 +6,12 @@ class Experience extends React.Component {
     super(props);
     this.state = [
       {
+        company: "Microsoft",
+        role: "Incoming Software Engineer Intern",
+        dept: "Azure",
+        date: "",
+      },
+      {
         company: "NYU Stern School of Business",
         role: "Application Developer",
         dept: "IT Enterprise Operations and Solutions",
@@ -18,14 +24,8 @@ class Experience extends React.Component {
         date: "Jun 2018 - Aug 2018",
       },
       {
-        company: "Google",
-        role: "CodeU Program Participant - Developer",
-        dept: "CodeU Program",
-        date: "Jun 2018 - Aug 2018",
-      },
-      {
         company: "NYU Tandon School of Engineering",
-        role: "Teaching Assistant",
+        role: "General Engineering Teaching Assistant",
         dept: "EG1003 Intro to Engineering and Design",
         date: "Jul 2017 - Dec 2017",
       }
@@ -39,7 +39,7 @@ class Experience extends React.Component {
         <div class="resume-item d-flex flex-column flex-md-row mb-5">
           <div class="resume-content mr-auto">
             <h4 class="mb-0">{this.state[i].company}</h4>
-            <div class="subheading mb-3">{this.state[i].role}</div>
+            <div class="subheading mb-0">{this.state[i].role}</div>
           </div>
           <div class="resume-date text-md-right">
             <span class="text-primary">{this.state[i].date}</span>

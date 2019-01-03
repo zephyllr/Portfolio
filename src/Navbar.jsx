@@ -12,7 +12,7 @@ class Navbar extends React.Component {
   }
 
   renderNavbarItems(i) {
-    let items = ["About", "Education", "Skills", "Experience", "Game-Designs"];
+    let items = ["About", "Education", "Skills", "Experience", "Hacks", "Game-Designs"];
     let ul_items = [];
     for (let i = 0; i < items.length; i++) {
       ul_items.push(this.renderNavbarItem(items[i]));

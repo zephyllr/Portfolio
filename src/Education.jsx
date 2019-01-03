@@ -22,6 +22,7 @@ class Education extends React.Component {
         "Computer Networking",
         "Algorithmic Problem Solving",
         "Applied Internet Technology",
+        "Intro to Engineering and Design",
         "Database Design and Web Implementation",
       ]
     };
@@ -29,7 +30,8 @@ class Education extends React.Component {
 
   renderCourses(start) {
     let end = this.state.courses.length;
-    if (start == 0) end = end & 1 ? Math.ceil(end/2) : end/2;
+    if (start === 0) end = end & 1 ? (end+1)/2 : end/2;
+    else start = end & 1 ? (end+1)/2 : end/2;
     let ul_items = [];
     for (let i = start; i < end; i++){
       ul_items.push(<li>{this.state.courses[i]}</li>)

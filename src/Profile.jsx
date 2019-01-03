@@ -4,6 +4,7 @@ import Education from './Education';
 import Skills from './Skills';
 import Experience from './Experience';
 import GameDesigns from './GameDesigns';
+import Hacks from './Hacks';
 
 
 class Profile extends React.Component {
@@ -17,6 +18,8 @@ class Profile extends React.Component {
         <Skills />
         <hr class="m-0" />
         <Experience />
+        <hr class="m-0" />
+        <Hacks />
         <hr class="m-0" />
         <GameDesigns />
 
