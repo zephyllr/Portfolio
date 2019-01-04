@@ -5,8 +5,8 @@ class Navbar extends React.Component {
   renderNavbarItem(val){
     let anchor = "#" + val.toLowerCase();
     return (
-      <li class="nav-item">
-        <a class="nav-link js-scroll-trigger" href={anchor}>{val}</a>
+      <li className="nav-item" key={val}>
+        <a className="nav-link js-scroll-trigger" href={anchor}>{val}</a>
       </li>
     );
   }

@@ -4,17 +4,19 @@ class GameDesigns extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = [
-      // Game Name, img dir, ulr, img files+
-      ["Element Hockey", "elementHockey", "element-hockey/id1175892583", "main", "instructions", "setup", "about"],
-      ["Color Drift", "colorDrift", "color-drift/id1139572518", "main", "setup", "settings"],
-    ]
+    this.state = {
+      games: [
+        // Game Name, img dir, ulr, img files+
+        ["Element Hockey", "elementHockey", "element-hockey/id1175892583", "main", "instructions", "setup", "about"],
+        ["Color Drift", "colorDrift", "color-drift/id1139572518", "main", "setup", "settings"],
+      ]
+    }
   }
 
   renderImages(i, path) {
     let imgs = [];
-    for (let j = 3; j < this.state[i].length; j++){
-      let fullPath = path + this.state[i][j] + ".png";
+    for (let j = 3; j < this.state.games[i].length; j++){
+      let fullPath = path + this.state.games[i][j] + ".png";
 
       imgs.push(
         <div class="resume-content mr-auto">
@@ -28,15 +30,15 @@ class GameDesigns extends React.Component {
   renderGameDesigns() {
     let items = [];
     let root = "img/gameDesigns";
-    for (let i = 0; i < this.state.length; i++){
-      let path = root + "/" + this.state[i][1] + "/";
-      let url = "https://itunes.apple.com/us/app/" + this.state[i][2];
+    for (let i = 0; i < this.state.games.length; i++){
+      let path = root + "/" + this.state.games[i][1] + "/";
+      let url = "https://itunes.apple.com/us/app/" + this.state.games[i][2];
       items.push(
-        <div class="subheading mb-3">
-          <a href={url} target="_blank" rel="noopener noreferrer">{this.state[i][0]}</a>
+        <div class="subheading mb-3" key={this.state.games[i][0]}>
+          <a href={url} target="_blank" rel="noopener noreferrer">{this.state.games[i][0]}</a>
         </div>);
       items.push(
-        <div class="resume-item d-flex flex-column flex-md-row mb-5">
+        <div class="resume-item d-flex flex-column flex-md-row mb-5" key={i}>
           {this.renderImages(i, path)};
         </div>
       );

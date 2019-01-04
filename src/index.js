@@ -6,8 +6,8 @@ import Profile from './Profile';
 class Portfolio extends React.Component {
   render() {
     return [
-      <Navbar />,
-      <Profile />,
+      <Navbar key="navbar"/>,
+      <Profile key="profile" />,
     ];
   }
 }

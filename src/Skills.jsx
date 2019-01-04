@@ -16,7 +16,7 @@ class Skills extends React.Component {
     for (let i = 0; i < category.length; i++){
       let skill = "devicon-" + category[i] + "-plain";
       ul_items.push(
-        <li class="list-inline-item">
+        <li class="list-inline-item" key={skill}>
           <i class={skill}></i>
         </li>);
     }

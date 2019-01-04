@@ -34,7 +34,7 @@ class Education extends React.Component {
     else start = end & 1 ? (end+1)/2 : end/2;
     let ul_items = [];
     for (let i = start; i < end; i++){
-      ul_items.push(<li>{this.state.courses[i]}</li>)
+      ul_items.push(<li key={i}>{this.state.courses[i]}</li>)
     }
     return ul_items;
   }
