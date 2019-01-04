@@ -52,6 +52,10 @@ class GameDesigns extends React.Component {
         <div class="my-auto">
           <h2 class="mb-5">Game Designs</h2>
           {this.renderGameDesigns()}
+          <div class="subheading mb-3">
+            <a href="https://zephyllr.weebly.com" target="_blank" rel="noopener noreferrer">Other ArtWork @Weebly</a>
+          </div>
+
         </div>
       </section>
     );
