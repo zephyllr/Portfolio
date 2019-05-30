@@ -8,15 +8,15 @@ class Experience extends React.Component {
       exp: [
         {
           company: "Microsoft",
-          role: "Incoming Software Engineer Intern",
+          role: "Software Engineering Intern",
           dept: "Azure",
           date: "",
         },
         {
           company: "NYU Stern School of Business",
-          role: "Application Developer",
+          role: "Full Stack Web Developer",
           dept: "IT Enterprise Operations and Solutions",
-          date: "Sep 2016 - Present",
+          date: "Sep 2016 - May 2019",
         },
         {
           company: "Bank of America Merrill Lynch",

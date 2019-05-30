@@ -6,7 +6,7 @@ class Skills extends React.Component {
     super(props);
     this.state = {
       progLangs: ["python", "java", "javascript", "c"],
-      webTechs: ["html5", "css3", "bootstrap", "mysql", "django", "git", "docker"],
+      webTechs: ["html5", "css3", "bootstrap", "mysql", "mongodb", "react", "django", "git", "docker"],
       designTools: ["photoshop", "illustrator"],
     };
   }
