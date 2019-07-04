@@ -7,9 +7,15 @@ class Hacks extends React.Component {
     this.state = {
       hacks: [
         {
+          name: "QR Portfolio",
+          descript: "Create and build your own online business card portfolio with QR codes",
+          link: "",
+          icons: ["mongodb", "express", "react", "nodejs", "javascript", "bootstrap"]
+        },
+        {
           name: "Google Code-U Chat App",
           descript: "Instant messenger with features including admin dashboard, user profiles, mentions",
-          link: "https://github.com/Tnek/Instant-Messenger",
+          link: "https://github.com/ZetongJia/CodeU-Spring-2018",
           icons: ["java"],
         },
         {

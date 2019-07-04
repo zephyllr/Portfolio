@@ -10,7 +10,7 @@ class Experience extends React.Component {
           company: "Microsoft",
           role: "Software Engineering Intern",
           dept: "Azure",
-          date: "",
+          date: "Jun 2019 - Aug 2019",
         },
         {
           company: "NYU Stern School of Business",
