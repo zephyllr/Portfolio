@@ -9,7 +9,7 @@ class Hacks extends React.Component {
         {
           name: "QR Portfolio",
           descript: "Create and build your own online business card portfolio with QR codes",
-          link: "",
+          link: "https://github.com/zephyllr/QR-Portfolio",
           icons: ["mongodb", "express", "react", "nodejs", "javascript", "bootstrap"]
         },
         {
