@@ -8,7 +8,7 @@ class Education extends React.Component {
       institution: "New York University",
       college: "Courant Institute of Mathematical Sciences",
       degree: "B.A. in Computer Science, Minor in Mathematics",
-      graduation: "Sep 2016 - May 2020",
+      graduation: "Sep 2016 - Dec 2019",
       courses: [
         "Data Structures",
         "Computer Systems Organization",
