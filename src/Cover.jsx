@@ -1,32 +1,33 @@
-import React from 'react';
+import React from "react";
+import { PERSONAL_DATA } from "./constants";
 
-class Cover extends React.Component {
-  render() {
-    return (
-      <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
-        <div class="my-auto">
-          <h1 class="mb-0">Alice
-            <span class="text-primary"> Lu</span>
-          </h1>
-          <div class="subheading mb-5">
-            <a href="mailto:alice.lu@nyu.edu">alice.lu@nyu.edu</a>
-          </div>
-          <p class="lead mb-5">
-            <b>Software Engineer</b><br/>
-            Graphics Designer<br/>
-          </p>
-          <div class="social-icons">
-            <a href="https://www.linkedin.com/in/alice-lu/">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="https://github.com/zephyllr">
-              <i class="fab fa-github"></i>
-            </a>
-          </div>
-        </div>
-      </section>
-    );
-  }
-}
-
-export default Cover;
+export const Cover = () => (
+  <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+    <div class="my-auto">
+      <h1 class="mb-0">
+        {PERSONAL_DATA.first_name}{" "}
+        <span class="text-primary">{PERSONAL_DATA.last_name}</span>
+      </h1>
+      <div class="subheading mb-5">
+        <a href={`mailto:${PERSONAL_DATA.email}`}>{PERSONAL_DATA.email}</a>
+      </div>
+      <p class="lead mb-5">{PERSONAL_DATA.role}</p>
+      <div class="social-icons">
+        <a
+          href={PERSONAL_DATA.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a
+          href={PERSONAL_DATA.github}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+);

@@ -1,65 +1,51 @@
-import React from 'react';
+import React from "react";
+import { GAME_DESIGNS, GAME_DESIGNS_DATA, PERSONAL_DATA } from "./constants";
 
-class GameDesigns extends React.Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      games: [
-        // Game Name, img dir, ulr, img files+
-        ["Element Hockey", "elementHockey", "element-hockey/id1175892583", "main", "instructions", "setup", "about"],
-        ["Color Drift", "colorDrift", "color-drift/id1139572518", "main", "setup", "settings"],
-      ]
-    }
-  }
-
-  renderImages(i, path) {
-    let imgs = [];
-    for (let j = 3; j < this.state.games[i].length; j++){
-      let fullPath = path + this.state.games[i][j] + ".png";
-
-      imgs.push(
-        <div class="resume-content mr-auto">
-          <img class="mx-auto mb-2" src={fullPath} height="300" alt=""/>
-        </div>
-      );
-    }
-    return imgs;
-  }
-
-  renderGameDesigns() {
-    let items = [];
-    let root = "img/gameDesigns";
-    for (let i = 0; i < this.state.games.length; i++){
-      let path = root + "/" + this.state.games[i][1] + "/";
-      let url = "https://itunes.apple.com/us/app/" + this.state.games[i][2];
-      items.push(
-        <div class="subheading mb-3" key={this.state.games[i][0]}>
-          <a href={url} target="_blank" rel="noopener noreferrer">{this.state.games[i][0]}</a>
-        </div>);
-      items.push(
-        <div class="resume-item d-flex flex-column flex-md-row mb-5" key={i}>
-          {this.renderImages(i, path)};
-        </div>
-      );
-    }
-    return items;
-  }
-
-  render() {
-    return (
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="game-designs">
-        <div class="my-auto">
-          <h2 class="mb-5">Game Designs</h2>
-          {this.renderGameDesigns()}
-          <div class="subheading mb-3">
-            <a href="https://zephyllr.weebly.com" target="_blank" rel="noopener noreferrer">Other ArtWork @Weebly</a>
-          </div>
-
-        </div>
-      </section>
+const renderImages = (img_dir, file_count) => {
+  // sadly globbing images with hardcorded file_count constant
+  const imgs = [];
+  for (let i = 1; i <= file_count; i++) {
+    const imgPath = `${img_dir}/screenshot_${i}.png`;
+    imgs.push(
+      <div class="resume-content mr-auto">
+        <img class="mx-auto mb-2" src={imgPath} height="300" />
+      </div>
     );
   }
-}
+  return imgs;
+};
 
-export default GameDesigns;
+const renderGameDesigns = () =>
+  GAME_DESIGNS_DATA.map(({ name, img_dir, file_count, url }) => {
+    return [
+      <div class="subheading mb-3" key={name}>
+        <a href={url} target="_blank" rel="noopener noreferrer">
+          {name}
+        </a>
+      </div>,
+      <div class="resume-item d-flex flex-column flex-md-row mb-5" key={name}>
+        {renderImages(img_dir, file_count)};
+      </div>,
+    ];
+  });
+
+export const GameDesigns = () => (
+  <section
+    class="resume-section p-3 p-lg-5 d-flex flex-column"
+    id="game-designs"
+  >
+    <div class="my-auto">
+      <h2 class="mb-5">{GAME_DESIGNS}</h2>
+      {renderGameDesigns()}
+      <div class="subheading mb-3">
+        <a
+          href={PERSONAL_DATA.weebly}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Other ArtWork @Weebly
+        </a>
+      </div>
+    </div>
+  </section>
+);

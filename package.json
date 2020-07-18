@@ -4,9 +4,10 @@
   "private": true,
   "homepage": "https://zephyllr.github.io",
   "dependencies": {
-    "react": "^16.7.0",
+    "react": "^16.13.1",
     "react-dom": "^16.7.0",
-    "react-scripts": "2.1.2"
+    "react-scripts": "^3.4.1",
+    "typescript": "^3.9.7"
   },
   "scripts": {
     "start": "react-scripts start",
