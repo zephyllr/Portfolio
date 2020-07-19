@@ -1,5 +1,5 @@
 import React from "react";
-import { Cover } from "./Cover";
+import { About } from "./About";
 import { Education } from "./Education";
 import { Skills } from "./Skills";
 import { Experience } from "./Experience";
@@ -7,17 +7,17 @@ import { GameDesigns } from "./GameDesigns";
 import { Projects } from "./Projects";
 
 export const Profile = () => (
-  <div class="container-fluid p-0">
-    <Cover />
-    <hr class="m-0" />
-    <Education />
-    <hr class="m-0" />
-    <Skills />
-    <hr class="m-0" />
+  <div className="container-fluid p-0">
+    <About />
+    <hr className="m-0" />
     <Experience />
-    <hr class="m-0" />
+    <hr className="m-0" />
+    <Education />
+    <hr className="m-0" />
+    <Skills />
+    <hr className="m-0" />
     <Projects />
-    <hr class="m-0" />
+    <hr className="m-0" />
     <GameDesigns />
   </div>
 );

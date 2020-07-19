@@ -7,16 +7,16 @@ export const GAME_DESIGNS = "Game Designs";
 
 export const PORTFOLIO_DATA = [
   ABOUT,
+  EXPERIENCES,
   EDUCATION,
   SKILLS,
-  EXPERIENCES,
   PROJECTS,
   GAME_DESIGNS,
 ];
 
 export const PERSONAL_DATA = {
-  first_name: "Alice",
-  last_name: "Lu",
+  firstName: "Alice",
+  lastName: "Lu",
   email: "alice.lu@nyu.edu",
   role: "Software Engineer",
   github: "https://github.com/zephyllr",
@@ -29,6 +29,7 @@ export const EDUCATION_DATA = {
   college: "Courant Institute of Mathematical Sciences",
   degree: "B.A. in Computer Science, Minor in Mathematics",
   graduation: "Sep 2016 - Dec 2019",
+  honors: "Cum Laude, University Honors Scholar",
   courses: [
     "Data Structures",
     "Computer Systems Organization",
@@ -92,14 +93,14 @@ export const EXPERIENCES_DATA = [
 export const GAME_DESIGNS_DATA = [
   {
     name: "Element Hockey",
-    img_dir: "img/gameDesigns/elementHockey",
-    file_count: 4,
+    imgDir: "img/gameDesigns/elementHockey",
+    fileCount: 4,
     url: "https://apps.apple.com/us/app/element-hockey/id1175892583",
   },
   {
     name: "Color Drift",
-    img_dir: "img/gameDesigns/colorDrift",
-    file_count: 3,
+    imgDir: "img/gameDesigns/colorDrift",
+    fileCount: 3,
     url: "https://apps.apple.com/us/app/color-drift/id1139572518",
   },
 ];
@@ -134,7 +135,7 @@ export const PROJECTS_DATA = [
     icons: ["python", "javascript", "bootstrap"],
   },
   {
-    name: "IRMA: Instant Relief and Medical Attention App",
+    name: "IRMA: Instant Relief and Medical Attention",
     description:
       "App that crowdsources first responders in case of emergencies via SMS and online",
     link: "https://github.com/zephyllr/IRMA",
@@ -143,11 +144,11 @@ export const PROJECTS_DATA = [
   {
     name: "NYU ACM-Women's Chapter Website",
     description: "",
-    link: "https://zephyllr.github.io/acmw_web/",
+    link: "https://zephyllr.github.io/acmwWeb/",
     icons: ["html5", "css3", "bootstrap"],
   },
   {
-    name: "More Apps @Github",
+    name: "More Projects @Github",
     description: "",
     link: "https://github.com/zephyllr",
     icons: [],
@@ -156,22 +157,23 @@ export const PROJECTS_DATA = [
 
 export const SKILLS_DATA = [
   {
-    category_name: "Programming Languages",
-    skill_set: ["python", "java", "javascript", "c"],
+    categoryName: "Programming Languages",
+    skillSet: ["python", "javascript", "java"],
   },
   {
-    category_name: "Web Technologies & Tools",
-    skill_set: [
+    categoryName: "Web Technologies & Tools",
+    skillSet: [
       "html5",
       "css3",
+      "sass",
       "bootstrap",
-      "mysql",
-      "mongodb",
       "react",
       "django",
+      "mysql",
+      "mongodb",
       "git",
       "docker",
     ],
   },
-  { category_name: "Design Tools", skill_set: ["photoshop", "illustrator"] },
+  { categoryName: "Design Tools", skillSet: ["photoshop", "illustrator"] },
 ];
