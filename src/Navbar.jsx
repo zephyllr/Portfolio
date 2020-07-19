@@ -4,7 +4,10 @@ import { PERSONAL_DATA, PORTFOLIO_DATA } from "./constants";
 const generateNavbarItems = () =>
   PORTFOLIO_DATA.map((link) => (
     <li className="nav-item" key={link}>
-      <a className="nav-link js-scroll-trigger" href={"#" + link.toLowerCase()}>
+      <a
+        className="nav-link js-scroll-trigger"
+        href={"#" + link.toLowerCase().replace(" ", "-")}
+      >
         {link}
       </a>
     </li>

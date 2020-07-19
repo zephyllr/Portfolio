@@ -25,7 +25,6 @@ export const PERSONAL_DATA = {
 };
 
 export const EDUCATION_DATA = {
-  id: EDUCATION,
   institution: "New York University",
   college: "Courant Institute of Mathematical Sciences",
   degree: "B.A. in Computer Science, Minor in Mathematics",
@@ -38,14 +37,18 @@ export const EDUCATION_DATA = {
     "Discrete Mathematics",
     "Data Analysis",
     "Linear Algebra",
+    "Intro to Engineering and Design",
 
-    "Parallel Computing",
-    "Computer Networking",
     "Algorithmic Problem Solving",
     "Applied Internet Technology",
-    "Intro to Engineering and Design",
+    "Computer Networking",
     "Database Design and Web Implementation",
+    "Large Scale Web Applications",
+    "Parallel Computing",
+    "Programming Languages",
+    "Social Networking",
   ],
+  logo: "img/experiences/nyu.png",
 };
 
 export const EXPERIENCES_DATA = [
@@ -54,30 +57,35 @@ export const EXPERIENCES_DATA = [
     role: "Software Engineer",
     dept: "Indivual Family Plan",
     date: "Mar 2020 - Present",
+    logo: "img/experiences/oscar.png",
   },
   {
     company: "Microsoft",
     role: "Software Engineer Intern",
     dept: "Azure",
     date: "Jun 2019 - Aug 2019",
+    logo: "img/experiences/microsoft.png",
   },
   {
     company: "NYU Stern School of Business",
     role: "Full Stack Web Developer",
     dept: "IT Enterprise Operations and Solutions",
     date: "Sep 2016 - May 2019",
+    logo: "img/experiences/nyu.png",
   },
   {
     company: "Bank of America Merrill Lynch",
     role: "Summer Technology Analyst",
     dept: "Credit Risk Technology",
     date: "Jun 2018 - Aug 2018",
+    logo: "img/experiences/boa.png",
   },
   {
     company: "NYU Tandon School of Engineering",
     role: "General Engineering Teaching Assistant",
     dept: "EG1003 Intro to Engineering and Design",
     date: "Jul 2017 - Dec 2017",
+    logo: "img/experiences/nyu.png",
   },
 ];
 
@@ -97,6 +105,13 @@ export const GAME_DESIGNS_DATA = [
 ];
 
 export const PROJECTS_DATA = [
+  {
+    name: "Twitter Sentiment Analysis",
+    description:
+      "A real-time data visualization subscription for twitter sentiment analysis",
+    link: "https://github.com/zephyllr/twitter-sentiment-analysis",
+    icons: ["python", "django", "mongodb", "docker"],
+  },
   {
     name: "QR Portfolio",
     description:

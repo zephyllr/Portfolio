@@ -1,16 +1,21 @@
 import React from "react";
 import { EDUCATION, EDUCATION_DATA } from "./constants";
 
-const generateCourses = (start) => {
-  let end = EDUCATION_DATA.courses.length;
-  if (start === 0) end = end & 1 ? (end + 1) / 2 : end / 2;
-  else start = end & 1 ? (end + 1) / 2 : end / 2;
+const generateCourses = (courses) =>
+  courses.map((course) => <li key={course}>{course}</li>);
 
-  const ul_items = [];
-  for (let i = start; i < end; i++) {
-    ul_items.push(<li key={i}>{EDUCATION_DATA.courses[i]}</li>);
-  }
-  return ul_items;
+const generateAllCourses = () => {
+  const half = Math.ceil(EDUCATION_DATA.courses.length / 2);
+
+  const firstColumn = EDUCATION_DATA.courses.splice(0, half);
+  const lastColumn = EDUCATION_DATA.courses.splice(-half);
+
+  return (
+    <div class="row">
+      <div class="col-6">{generateCourses(firstColumn)}</div>
+      <div class="col-6">{generateCourses(lastColumn)}</div>
+    </div>
+  );
 };
 
 export const Education = () => (
@@ -31,12 +36,7 @@ export const Education = () => (
 
       <div>
         <b>Relevant Courses:</b>
-        <div class="row">
-          <div class="col-6">{generateCourses(0)}</div>
-          <div class="col-6">
-            {generateCourses(EDUCATION_DATA.courses.length / 2)}
-          </div>
-        </div>
+        {generateAllCourses()}
       </div>
     </div>
   </section>
