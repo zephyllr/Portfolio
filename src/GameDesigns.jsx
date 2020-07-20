@@ -2,12 +2,12 @@ import React from "react";
 import { GAME_DESIGNS, GAME_DESIGNS_DATA, PERSONAL_DATA } from "./constants";
 
 const renderImages = (imgDir, fileCount) => {
-  // sadly globbing images with hardcorded fileCount constant
+  // unprofessionally globbing images with hardcorded fileCount constant
   const imgs = [];
   for (let i = 1; i <= fileCount; i++) {
     const imgPath = `${imgDir}/screenshot_${i}.png`;
     imgs.push(
-      <div className="resume-content mx-auto mb-5">
+      <div className="resume-content mx-auto mb-5" key={`screenshot_${i}`}>
         <img src={imgPath} height="300" />
       </div>
     );
@@ -16,21 +16,18 @@ const renderImages = (imgDir, fileCount) => {
 };
 
 const renderGameDesigns = () =>
-  GAME_DESIGNS_DATA.map(({ name, imgDir, fileCount, url }) => {
-    return [
-      <div className="subheading mb-3" key={name}>
+  GAME_DESIGNS_DATA.map(({ name, imgDir, fileCount, url }) => (
+    <div key={name}>
+      <div className="subheading mb-3">
         <a href={url} target="_blank" rel="noopener noreferrer">
           {name}
         </a>
-      </div>,
-      <div
-        className="resume-item d-flex flex-wrap flex-sm-row text-center"
-        key={name}
-      >
+      </div>
+      <div className="resume-item d-flex flex-wrap flex-sm-row" key={name}>
         {renderImages(imgDir, fileCount)}
-      </div>,
-    ];
-  });
+      </div>
+    </div>
+  ));
 
 export const GameDesigns = () => (
   <section

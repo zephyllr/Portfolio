@@ -10,10 +10,10 @@ const generateSkillSet = (skillSet) =>
 
 const generateSkillSets = () =>
   SKILLS_DATA.map(({ categoryName, skillSet }) => (
-    <>
+    <div key={categoryName}>
       <div className="subheading mb-3">{categoryName}</div>
       <ul className="list-inline dev-icons">{generateSkillSet(skillSet)}</ul>
-    </>
+    </div>
   ));
 
 export const Skills = () => (

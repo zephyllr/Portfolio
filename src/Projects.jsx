@@ -9,17 +9,17 @@ const generateLanguageIcons = (icons) =>
   ));
 
 const generateProjects = () =>
-  PROJECTS_DATA.map(({ name, description, link, icons }) => [
-    <div className="subheading mb-0" key={name}>
-      <a href={link} target="_blank" rel="noopener noreferrer">
-        {name}
-      </a>
-    </div>,
-    <p key={description}>
-      {description}
+  PROJECTS_DATA.map(({ name, description, link, icons }) => (
+    <div key={name}>
+      <div className="subheading">
+        <a href={link} target="_blank" rel="noopener noreferrer">
+          {name}
+        </a>
+      </div>
+      <p key={description}>{description}</p>
       <ul className="list-inline dev-icons">{generateLanguageIcons(icons)}</ul>
-    </p>,
-  ]);
+    </div>
+  ));
 
 export const Projects = () => (
   <section
